@@ -19,7 +19,7 @@ export default function Weather(props) {
       description: response.data.weather[0].description,
       humidity: response.data.main.humidity,
 
-      iconUrl: `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
+      icon: response.data.weather[0].icon,
     });
   }
 
@@ -31,7 +31,7 @@ export default function Weather(props) {
 
   function handleSubmit(event) {
     event.preventDafault();
-    search(city);
+    search();
   }
 
   function handleCityChange(event) {
