@@ -16,7 +16,7 @@ export default function WeatherForecast(props) {
 
   let latitude = props.coordinates.lat;
   let longitude = props.coordinates.lon;
-  const apiKey = "f3887e262c88d1158f7e2ef4998e234c";
+  const apiKey = "57821c3b75b60c68ecd1a8d0dd1aa8d3";
   const apiUrl = `https://api.openweathermap.org/data/3.0/onecall?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=metric`;
 
   axios.get(apiUrl).then(handleResponse);
@@ -25,9 +25,15 @@ export default function WeatherForecast(props) {
     return (
       <div className="WeatherForecast">
         <div className="row">
-          <div className="col">
-            <WeatherForecastDay data={forecast[0]} />
-          </div>
+          {forecast.map(function (dailyForecast, index) {
+            if (index < 6) {
+              return (
+                <div className="col" key={index}>
+                  <WeatherForecastDay data={dailyForecast} />
+                </div>
+              );
+            }
+          })}
         </div>
       </div>
     );
