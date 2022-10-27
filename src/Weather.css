@@ -27,12 +27,13 @@
   font-weight: 200;
 }
 
-.WeatherTemperature .Temperature {
+.WeatherTemperature {
   font-weight: bold;
   font-size: 64px;
   color: rgb(135, 135, 135);
   line-height: 64px;
   font-weight: 400;
+  margin-top: -70px;
 }
 
 .WeatherIcon {
