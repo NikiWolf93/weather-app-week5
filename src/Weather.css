@@ -1,13 +1,17 @@
+:root {
+  --main-color: white;
+}
+
 .Weather {
   border: 1px solid rgb(135, 135, 135);
-  background-color: rgb(52, 50, 50);
+  background-color: #144d6c;
   border-radius: 8px;
   padding: 16px;
   margin: 30px auto;
 }
 
 .Weather h1 {
-  color: rgb(135, 135, 135);
+  color: var(--main-color);
   display: block;
   font-size: 24px;
   font-weight: 100px;
@@ -22,7 +26,7 @@
 
 .Weather li {
   list-style: none;
-  color: rgb(135, 135, 135);
+  color: var(--main-color);
   font-size: 16px;
   font-weight: 200;
 }
@@ -30,7 +34,7 @@
 .WeatherTemperature {
   font-weight: bold;
   font-size: 64px;
-  color: rgb(135, 135, 135);
+  color: var(--main-color);
   line-height: 64px;
   font-weight: 400;
   margin-top: -70px;
@@ -47,13 +51,13 @@
 .TempUnit {
   font-weight: bold;
   font-size: 64px;
-  color: rgb(135, 135, 135);
+  color: var(--main-color);
   line-height: 64px;
   font-weight: 400;
 }
 
 .Weather .unit {
-  color: rgb(135, 135, 135);
+  color: var(--main-color);
   font-size: 16px;
   font-weight: 400;
   position: relative;
@@ -63,5 +67,24 @@
 }
 
 .WeatherForecast {
-  color: rgb(135, 135, 135);
+  color: var(--main-color);
+}
+
+.Clouds {
+  width: 700px;
+  height: 400px;
+}
+
+.Button {
+  margin-right: 5px;
+  color: var(--main-color);
+}
+
+.Size {
+  font-size: 20px;
+  font-weight: 400;
+  position: relative;
+  top: -30px;
+  margin-left: 5px;
+  line-height: 1;
 }

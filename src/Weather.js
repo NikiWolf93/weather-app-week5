@@ -3,6 +3,7 @@ import WeatherInfo from "./WeatherInfo";
 import WeatherForecast from "./WeatherForecast";
 import "./Weather.css";
 import axios from "axios";
+import image from "./clouds.jpg";
 
 export default function Weather(props) {
   const [weatherData, setWeatherData] = useState({ ready: false });
@@ -56,7 +57,7 @@ export default function Weather(props) {
               <input
                 type="submit"
                 value="search"
-                className="btn btn-primary m-3 w-100 form-control"
+                className="btn bg-white text-dark mt-3 mr-1 form-control"
               />
             </div>
           </div>
@@ -67,6 +68,11 @@ export default function Weather(props) {
     );
   } else {
     search();
-    return "Loading....";
+    return (
+      <div>
+        <img className="Clouds" src={image} alt="clouds" />
+        <p>"Loading...." </p>
+      </div>
+    );
   }
 }
